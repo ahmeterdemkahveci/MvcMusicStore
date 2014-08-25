@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcMusicStore.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,7 +7,7 @@ using System.Web.Mvc;
 
 namespace MvcMusicStore.Models
 {
-    public partial class ShoppingCart
+    public partial class ShoppingCart : IShoppingCart
     {
         MusicStoreEntities storeDB = new MusicStoreEntities();
 
@@ -14,7 +15,7 @@ namespace MvcMusicStore.Models
 
         public const string CartSessionKey = "CartId";
 
-        public static ShoppingCart GetCart(HttpContextBase context)
+        public  ShoppingCart GetCart(HttpContextBase context)
         {
             var cart = new ShoppingCart();
             cart.ShoppingCartId = cart.GetCartId(context);
@@ -22,7 +23,7 @@ namespace MvcMusicStore.Models
         }
 
         // Helper method to simplify shopping cart calls
-        public static ShoppingCart GetCart(Controller controller)
+        public  ShoppingCart GetCart(Controller controller)
         {
             return GetCart(controller.HttpContext);
         }
@@ -196,5 +197,7 @@ cart => cart.CartId == ShoppingCartId
             }
             storeDB.SaveChanges();
         }
+
+       
     }
 }

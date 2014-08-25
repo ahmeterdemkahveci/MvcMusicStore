@@ -2,19 +2,28 @@
 using System.Web.Mvc;
 using MvcMusicStore.Models;
 using MvcMusicStore.ViewModels;
+using MvcMusicStore.Interface;
 
 namespace MvcMusicStore.Controllers
 {
     public class ShoppingCartController : Controller
     {
+        private readonly IShoppingCart _shoppingCart;
         MusicStoreEntities storeDB = new MusicStoreEntities();
 
         //
         // GET: /ShoppingCart/
 
+        
+        public ShoppingCartController(IShoppingCart shoppingCart)
+        {
+            _shoppingCart = shoppingCart; 
+        }
+
+
         public ActionResult Index()
         {
-            var cart = ShoppingCart.GetCart(this.HttpContext);
+            var cart =_shoppingCart.GetCart(this.HttpContext);
 
             // Set up our ViewModel
             var viewModel = new ShoppingCartViewModel
@@ -38,7 +47,7 @@ namespace MvcMusicStore.Controllers
                 .Single(album => album.AlbumId == id);
 
             // Add it to the shopping cart
-            var cart = ShoppingCart.GetCart(this.HttpContext);
+            var cart = _shoppingCart.GetCart(this.HttpContext);
 
             cart.AddToCart(addedAlbum);
 
@@ -53,7 +62,7 @@ namespace MvcMusicStore.Controllers
         public ActionResult RemoveFromCart(int id)
         {
             // Remove the item from the cart
-            var cart = ShoppingCart.GetCart(this.HttpContext);
+            var cart = _shoppingCart.GetCart(this.HttpContext);
 
             // Get the name of the album to display confirmation
             string albumName = storeDB.Carts
@@ -82,7 +91,7 @@ namespace MvcMusicStore.Controllers
         [ChildActionOnly]
         public ActionResult CartSummary()
         {
-            var cart = ShoppingCart.GetCart(this.HttpContext);
+            var cart = _shoppingCart.GetCart(this.HttpContext);
 
             ViewData["CartCount"] = cart.GetCount();
 

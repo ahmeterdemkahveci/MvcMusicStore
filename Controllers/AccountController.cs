@@ -6,11 +6,17 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using MvcMusicStore.Models;
+using MvcMusicStore.Interface;
 
 namespace MvcApplication1.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly IShoppingCart _shoppingCart; 
+        public AccountController(IShoppingCart shoppigCart)
+        {
+            _shoppingCart = shoppigCart;
+        }
 
         //
         // GET: /Account/LogOn
@@ -160,7 +166,7 @@ namespace MvcApplication1.Controllers
         private void MigrateShoppingCart(string UserName)
         {
             // Associate shopping cart items with logged-in user
-            var cart = ShoppingCart.GetCart(this.HttpContext);
+            var cart = _shoppingCart.GetCart(this.HttpContext);
 
             cart.MigrateCart(UserName);
             Session[ShoppingCart.CartSessionKey] = UserName;

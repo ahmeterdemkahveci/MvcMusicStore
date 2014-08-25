@@ -2,12 +2,21 @@
  using System.Linq;
  using System.Web.Mvc;
  using MvcMusicStore.Models;
+using MvcMusicStore.Interface;
  
 namespace MvcMusicStore.Controllers
 {
+
     [Authorize]
     public class CheckoutController : Controller
     {
+
+        private readonly IShoppingCart _shoppingCart; 
+        public CheckoutController(IShoppingCart shoppingCart)
+        {
+            _shoppingCart = shoppingCart;
+        }
+
         MusicStoreEntities storeDB = new MusicStoreEntities();
         const string PromoCode = "FREE";
         //
@@ -40,7 +49,7 @@ namespace MvcMusicStore.Controllers
                     storeDB.Orders.Add(order);
                     storeDB.SaveChanges();
                     //Process the order
-                    var cart = ShoppingCart.GetCart(this.HttpContext);
+                    var cart = _shoppingCart.GetCart(this.HttpContext);
                     cart.CreateOrder(order);
  
                     return RedirectToAction("Complete",

@@ -19,3 +19,27 @@ C:\Users\Administrator\documents\visual studio 2012\Projects\MvcMusicStore\MvcMu
 C:\Users\Administrator\documents\visual studio 2012\Projects\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.dll
 C:\Users\Administrator\documents\visual studio 2012\Projects\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.pdb
 C:\Users\Administrator\documents\visual studio 2012\Projects\MvcMusicStore\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\MvcMusicStore.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\MvcMusicStore.pdb
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\Castle.Core.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\Castle.Windsor.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\Castle.Core.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\Castle.Windsor.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\EntityFramework.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.Helpers.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.Mvc.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.Razor.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.WebPages.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\Administrator\Desktop\MvcMusicStore\obj\Debug\MvcMusicStore.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\MvcMusicStore\obj\Debug\MvcMusicStore.dll
+C:\Users\Administrator\Desktop\MvcMusicStore\obj\Debug\MvcMusicStore.pdb

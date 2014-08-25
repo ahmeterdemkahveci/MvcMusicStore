@@ -11,7 +11,9 @@ namespace MvcMusicStore.Controllers
         // GET: /Home/
         MusicStoreEntities storeDB = new MusicStoreEntities();
         public ActionResult Index()
-        {
+        {  
+
+
             // Get most popular albums
             var albums = GetTopSellingAlbums(5);
 
